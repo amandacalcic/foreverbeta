@@ -1,0 +1,20 @@
+#privacy-term-page{
+    width: 100vw;
+    height: 85vh;
+}
+
+article p {
+    margin: 0 2rem 5rem 2rem;
+    text-align: justify;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}

@@ -1,0 +1,40 @@
+.input-block {
+    position: relative;
+}
+
+.input-block + .input-block {
+    margin-top: 1.4rem;
+}
+
+.input-block input {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 3rem;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--color-border-input);
+    outline: 0;
+    padding: 0 1rem;
+    color: var(--color-text);
+    font: 1.6rem Hind Siliguri;
+}
+
+input[type='radio'] {
+    width: auto;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    background-color: var(--color-backgroud);
+    border-color: var(--color-border-input);
+    border-radius: 50%;
+}
+
+.input-block-invalid input {
+    border-bottom: 1px solid var(--color-border-input-invalid);
+    color: var(--color-text-input-invalid);
+}
+
+.input-block-valid input {
+    border-bottom: 1px solid var(--color-border-input-valid);
+    color: var(--color-text-input-valid);
+}

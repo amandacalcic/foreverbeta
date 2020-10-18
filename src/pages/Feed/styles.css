@@ -1,0 +1,46 @@
+#page-feed {
+    width: 100vw;
+    height: 2580vh;
+    background: linear-gradient(141deg, #FF50AA 0%, #7937AD 35%, #240F70 70%, #000000 95%);
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 0;
+}
+
+ .page-header .logo-page-header a {
+    height: 4rem;
+    transition: opacity 0.2s;
+} 
+
+.page-header .logo-page-header > img {
+    height: 6rem;
+}
+
+.stories-container {
+    margin: 0.6rem 4rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (min-width: 700px) {
+    .stories-container {
+        scrollbar-width: auto;
+        cursor: ew-resize;
+    }
+}

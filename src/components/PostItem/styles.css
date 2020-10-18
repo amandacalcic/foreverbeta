@@ -1,0 +1,114 @@
+.post-container {
+    margin: 2.4rem 0;
+    margin-bottom: 2rem;
+}
+
+.post-container > header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-container > header img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+}
+
+.post-container .post-user {
+    width: 33rem;
+    /* height: 50rem; */
+    background: var(--color-post-backgroud);
+    border-radius: 3rem;
+    /* padding-bottom: 4rem; */
+    overflow: hidden;
+}
+
+.post-container .post-user header {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-container .post-user header > img {
+    width: 33rem;
+    height: 33rem;
+}
+
+.post-container .post-user header .post-data {
+    margin-top: -3.2rem;
+    margin-left: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user header .post-data .post-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.post-user header .post-data img:first-child {
+    padding-right: 0.8rem;
+}
+
+.post-user header .post-actions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 4.5rem;
+    margin-right: 1rem;
+}
+
+.post-user header .post-actions div {
+    background-color: var(--color-backgroud-post-actions);
+    margin: 0.5rem 0;
+    border-radius: 1.6rem;
+    padding: 0 0.8rem;
+    color: var(--color-text);
+    font-weight: 500;
+    font: Hind Siliguri;
+    font-size: 1.2rem;
+}
+
+.post-user header .post-actions > div {
+    margin-right: 1.2rem;
+}
+
+.post-description {
+    padding-top: 0;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-description p {
+    margin-top: 1.6rem !important;
+    white-space: pre-line;
+    text-align: start;
+}
+
+.post-description div {
+    background: var(--color-button-posts);
+    margin-top: 1rem;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3rem 3rem 0 0;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+@media (min-width: 600px) {
+    .post-container .post-user {
+        width: 50rem;
+        height: 70rem;
+    }
+
+    .post-container .post-user header > img {
+        width: 50rem;
+        height: 50rem;
+    }
+}

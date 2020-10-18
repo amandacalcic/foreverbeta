@@ -1,0 +1,45 @@
+#about-us-page {
+    width: 100vw;
+    height: 85vh;
+}
+
+h1 {
+    margin: 0 2rem;
+    text-align: center;
+}
+
+article p {
+    margin: 0 2rem;
+    text-align: justify;
+}
+
+article p:last-of-type {
+    margin: 2rem 2rem 0 2rem;
+}
+
+article ul {
+    list-style-type: none;
+}
+
+article ul a {
+    margin: 0 3rem;
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+article .behance-link {
+    margin: 3rem 2rem;
+    margin-bottom: 0;
+}
+
+article .behance-link a {
+    color: var(--color-text-link);
+    text-decoration: none;  
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}

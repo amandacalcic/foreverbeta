@@ -1,0 +1,117 @@
+.page-home {
+    height: 100vh;
+    width: 100vw;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* .page-container:nth-child(1) {
+    background: #f1ffe7;
+  } */
+
+.page-container:nth-child(2) {
+/* background: #dfffd9; */
+background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
+}
+
+.overlays-root {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.model-section {
+    height: 100vh;
+
+    scroll-snap-align: start;
+}
+
+#page-home-content .model-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home-content .model-section .logo-container {
+    margin-top: 22rem;
+}
+
+#page-home-content .model-section .logo-container img {
+    height: 10rem;
+}
+
+#page-home-content .model-section .button-container {
+    padding-bottom: 9rem;
+}
+
+#page-home-informations .model-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home-informations .model-section .page-framer {
+    width: 80vw !important;
+    height: 80vh !important;
+    margin-top: -4rem;
+
+    cursor: ew-resize;
+}
+
+#page-home-informations .model-section .page-framer [data-framer-component-type="Frame"] {
+    border-radius: 2.5rem 0 2.5rem 0;
+    background-color: rgba(var(--color-backgroud-rgb), 0.8) !important;
+
+    display: flex !important;
+    flex-direction: column;
+}
+
+#page-home-informations .model-section .page-framer .logo-container {
+    margin-top: 6rem;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+#page-home-informations .model-section .page-framer .logo-container img {
+    height: 6.5rem;
+}
+
+#page-home-informations .model-section .page-framer h1 {
+    text-align: left;
+    margin-bottom: 1.6rem;
+    padding: 0 1rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+#page-home-informations .model-section .page-framer .text-container {
+    text-align: left;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+#page-home-informations .model-section .page-framer .text-container p:first-child {
+    padding-bottom: 2rem;
+}
+
+#page-home-informations .model-section .page-framer footer {
+    margin-top: -1rem;
+}
+
+@media (min-width:600px) {
+    #page-home-content .model-section .button-container {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width:1000px) {
+    #page-home-informations .model-section .page-framer {
+        width: 50vw !important;
+    }
+}

@@ -1,0 +1,85 @@
+:root{
+    font-size:60%;
+
+    --select-border: #fff;
+    --select-arrow: var(--select-border);
+
+    --color-text: #D3D3D3;
+    --color-text-link: #FF579D;
+    --color-text-dark: #000000;
+    --color-text-input-valid: #48DBB7;
+    --color-text-input-invalid: #FF2951;
+
+    --color-backgroud: #111111;
+    --color-backgroud-rgb: 17, 17, 17;
+    --color-backgroud-menu: linear-gradient( #FE6E6F, #FF50AA, #7937AD);
+    --color-backgroud-day: linear-gradient( #FF50AA, #7937AD);
+    --color-backgroud-afternoon: linear-gradient(#7937AD, #240F70);
+    --color-backgroud-night: linear-gradient(#240F70, #000000);
+
+    --color-border-input: #D3D3D3;
+    --color-border-input-valid: #48DBB7;
+    --color-border-input-invalid: #FF2951;
+
+    /* --color-backgound-post: #111111; */
+    --color-post-backgroud: #111111;
+    --color-backgroud-post-actions: #c4c4c423;
+    
+    --color-button-text: #FFFFFF;
+    --color-button-background: linear-gradient(to right, #7937AD, #FF50AA, #FE6E6F);
+    --color-button-background-afternoon: linear-gradient(to right, #240F70, #7937AD, #FF50AA);
+    --color-button-background-secundary: #7937AD;    
+    --color-button-background-tertiary: #FF50AA;
+    --color-button-posts: #3D3D3D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 85vh;
+}
+
+body {
+    background: #2C2C2C;
+    background-repeat: no-repeat;
+    color: var(--color-text);
+}
+
+#root {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+    font: normal 1.6rem Hind Siliguri;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+::placeholder {
+    color: var(--color-text);
+    font: Hind Siliguri;
+    opacity: 1;
+}
+
+.container {
+    width: 90vw;
+    max-width: 700px;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}

@@ -1,0 +1,13 @@
+button {
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+    border: none;
+    border-radius: 2.5rem;
+    padding: 0.9rem 4rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,46 @@
+#register-page{
+    width: 100vw;
+    height: 85vh;
+}
+
+.form-page {
+    margin: 0 2rem; 
+}
+
+.photo-icon {
+    display: grid;
+    grid-template-columns: 80% 10%;
+}
+
+.photo-icon img {
+    padding-left: 1.6rem;
+}
+
+.term-confirmation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.term-confirmation p {
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+}
+
+.term-confirmation a {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+@media (min-width:700px) {
+    .photo-icon {
+        grid-template-columns: 90% 10%;
+    }
+}
