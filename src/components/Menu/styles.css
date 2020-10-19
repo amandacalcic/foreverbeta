@@ -95,3 +95,14 @@ nav {
   cursor: pointer;
 }
   
+@media (min-width: 600px){
+  .background {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1000px){
+  .background {
+    width: 30vw;
+  }
+}
