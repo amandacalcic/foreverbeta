@@ -15,13 +15,13 @@ function Feed() {
 
     useEffect(() => {
         async function loadStories() {
-            const response = await fetch('http://192.168.15.18:3333/stories?_expand=author')
+            const response = await fetch('https://server-foreverbeta.herokuapp.com/stories?_expand=author')
             const data = await response.json()
             setStories(data)
         }
 
         async function loadFeed() {
-            const responseFeed = await fetch('http://192.168.15.18:3333/feed?_expand=author')
+            const responseFeed = await fetch('https://server-foreverbeta.herokuapp.com/feed?_expand=author')
             const dataFeed = await responseFeed.json()
             setFeed(dataFeed)
         }
