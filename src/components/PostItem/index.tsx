@@ -7,13 +7,13 @@ import HeartIcon from '../../assets/images/icons/heart.svg';
 import ArrowUpIcon from '../../assets/images/icons/arrow-up.svg';
 import ArrowDownIcon from '../../assets/images/icons/arrow-down.svg';
 
-
 import './styles.css';
 
 export interface Post {
     id: number;
     image: string;
     description: string;
+    reference: string;
     likes: number;
     comments: number
     author: {
@@ -67,7 +67,12 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
     
                 <div className="post-description">
                     { (!expandedInd && <p>{post.description.substring(0,200)+"..."}</p>) 
-                        || (expandedInd && <p>{post.description}</p>) } 
+                        || (expandedInd &&  
+                        <p>
+                            {post.description}
+                            <br /><br />
+                            Fonte imagem: <a href={post.reference} rel="noopener noreferrer" target='_blank'>{post.reference}</a>
+                        </p>) } 
                     <div onClick={toggleExpandIndications}>
                         {expandedInd === false ? <img src={ArrowDownIcon} alt="" /> : <img src={ArrowUpIcon} alt="" />}
                     </div>

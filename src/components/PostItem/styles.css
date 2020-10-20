@@ -91,6 +91,11 @@
     text-align: start;
 }
 
+.post-description a {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
 .post-description div {
     background: var(--color-button-posts);
     margin-top: 1rem;
