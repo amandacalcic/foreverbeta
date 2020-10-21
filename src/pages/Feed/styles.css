@@ -1,6 +1,5 @@
 #page-feed {
     width: 100vw;
-    height: 2580vh;
     background: linear-gradient(141deg, #FF50AA 0%, #7937AD 35%, #240F70 70%, #000000 95%);
 }
 
@@ -35,12 +34,27 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+main .post-container {
+    width: 80%;
 }
 
 @media (min-width: 700px) {
+    #page-feed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .stories-container {
         scrollbar-width: auto;
         cursor: ew-resize;
+    }
+}
+
+@media(min-width: 830px){
+    .feed-body {
+        width: 50%;
     }
 }

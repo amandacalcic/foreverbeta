@@ -17,7 +17,7 @@
 }
 
 .post-container .post-user {
-    width: 33rem;
+    /* width: 33rem; */
     /* height: 50rem; */
     background: var(--color-post-backgroud);
     border-radius: 3rem;
@@ -31,8 +31,8 @@
 }
 
 .post-container .post-user header > img {
-    width: 33rem;
-    height: 33rem;
+    width: 100%;
+    height: 100%;
 }
 
 .post-container .post-user header .post-data {
@@ -107,13 +107,13 @@
 }
 
 @media (min-width: 600px) {
-    .post-container .post-user {
+    /* .post-container .post-user {
         width: 50rem;
-        /* height: 70rem; */
-    }
+        height: 70rem;
+    } */
 
-    .post-container .post-user header > img {
+    /* .post-container .post-user header > img {
         width: 50rem;
         height: 50rem;
-    }
+    } */
 }

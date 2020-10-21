@@ -16,6 +16,7 @@ nav {
 }
 
 .menu-button {
+  
   z-index: 10000;
   outline: none;
   border: none;
@@ -28,8 +29,17 @@ nav {
   left: -3rem;
   width: 10vw;
   height: 50vh;
-  /* background: rgba(255, 255, 255, 0.35); */
   background: transparent;
+}
+
+.background-menu {
+  position: absolute; 
+  left: 3rem; 
+  top: -41%;
+}
+
+.button-position {
+  margin-left: 1.6rem;
 }
 
 .nav-menu ul, li {
@@ -38,10 +48,9 @@ nav {
 }
 
 .nav-menu ul {
-  padding: 25px;
   position: absolute;
-  top: 10rem;
-  left: 5rem;
+  top: 17%;
+  left: 10rem;
   width: 230px;
 }
 
@@ -99,10 +108,20 @@ nav {
   .background {
     width: 50vw;
   }
+
+  .nav-menu ul {
+    top: 23%;
+  }
 }
 
 @media (min-width: 1000px){
   .background {
     width: 30vw;
+  }
+}
+
+@media (min-height: 900px){
+  .background-menu {
+    top: -5%;
   }
 }

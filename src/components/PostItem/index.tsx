@@ -67,12 +67,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
     
                 <div className="post-description">
                     { (!expandedInd && <p>{post.description.substring(0,200)+"..."}</p>) 
-                        || (expandedInd &&  
-                        <p>
-                            {post.description}
-                            <br /><br />
-                            Fonte imagem: <a href={post.reference} rel="noopener noreferrer" target='_blank'>{post.reference}</a>
-                        </p>) } 
+                        || (expandedInd && <p>{post.description}</p>) } 
                     <div onClick={toggleExpandIndications}>
                         {expandedInd === false ? <img src={ArrowDownIcon} alt="" /> : <img src={ArrowUpIcon} alt="" />}
                     </div>
