@@ -17,11 +17,8 @@
 }
 
 .post-container .post-user {
-    /* width: 33rem; */
-    /* height: 50rem; */
     background: var(--color-post-backgroud);
     border-radius: 3rem;
-    /* padding-bottom: 4rem; */
     overflow: hidden;
 }
 
@@ -104,16 +101,4 @@
     border-radius: 3rem 3rem 0 0;
     text-align: center;
     padding: 0.2rem;
-}
-
-@media (min-width: 600px) {
-    /* .post-container .post-user {
-        width: 50rem;
-        height: 70rem;
-    } */
-
-    /* .post-container .post-user header > img {
-        width: 50rem;
-        height: 50rem;
-    } */
 }

@@ -1,10 +1,19 @@
 #privacy-term-page{
     width: 100vw;
     height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-body {
+    width: 80%;
 }
 
 article p {
     margin: 0 2rem 5rem 2rem;
+    white-space: pre-line;
     text-align: justify;
 }
 
