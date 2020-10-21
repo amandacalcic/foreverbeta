@@ -1,6 +1,6 @@
 #register-page{
     width: 100vw;
-    height: 85vh;
+    /* height: 85vh; */
 
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
 .form-page {
     margin: 0 2rem;
-    width: 80%;
+    width: 85%;
 }
 
 .photo-icon {
@@ -18,7 +18,11 @@
 }
 
 .photo-icon input {
-    width: 97%;
+    width: 95%;
+}
+
+.photo-icon img {
+    margin-left: -25%;
 }
 
 .term-confirmation {
@@ -47,5 +51,9 @@ footer {
 @media (min-width:700px) {
     .form-page {
         width: 50%;
+    }
+
+    .photo-icon img {
+        margin-left: 0;
     }
 }

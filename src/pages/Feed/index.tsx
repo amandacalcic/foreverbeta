@@ -44,7 +44,7 @@ function Feed() {
     return (
         <div>
             <Loader style={{display: !loading ? 'none' : 'flex'}} />
-            <div style={{display: loading ? 'none' : 'unset'}}>
+            <div style={{display: loading ? 'none' : 'flex'}}>
                 <div id="page-feed" className="container">
                     <header className="page-header">
                         <div className="logo-page-header">

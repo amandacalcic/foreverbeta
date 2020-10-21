@@ -49,12 +49,6 @@ body {
     color: var(--color-text);
 }
 
-#root {
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-}
-
 body,
 input,
 select,
@@ -81,5 +75,11 @@ h1 {
 @media (min-width: 700px) {
     :root {
         font-size: 62.5%;
+    }
+
+    #root {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
     }
 }
