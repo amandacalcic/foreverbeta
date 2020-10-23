@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85.819" height="85.83" viewBox="0 0 85.819 85.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #422f0d;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" fy="0.20246273279190063" r="0.655" gradientTransform="translate(0)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eab242"/>
+      <stop offset="0.362" stop-color="#e9af41"/>
+      <stop offset="0.562" stop-color="#e8a73e"/>
+      <stop offset="0.723" stop-color="#e69939"/>
+      <stop offset="0.863" stop-color="#e48632"/>
+      <stop offset="0.949" stop-color="#e2762d"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.61" r="0.607" gradientTransform="translate(-0.143) scale(1.286 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0.73" stop-color="#422f0d"/>
+      <stop offset="0.863" stop-color="#2e2009"/>
+      <stop offset="1" stop-color="#160f04"/>
+    </radialGradient>
+  </defs>
+  <g id="Grupo_2" data-name="Grupo 2" transform="translate(-1373.391 -120.542)">
+    <path id="Caminho_2" data-name="Caminho 2" class="cls-1" d="M1416.3,120.542a42.915,42.915,0,1,0,42.909,42.92A42.962,42.962,0,0,0,1416.3,120.542Zm-18.5,36.81c-3.871,0-7-4.03-7-9s3.129-9,7-9,7,4.03,7,9S1401.671,157.352,1397.8,157.352Zm37,0c-3.871,0-7-4.03-7-9s3.129-9,7-9,7,4.03,7,9S1438.671,157.352,1434.8,157.352Z"/>
+    <ellipse id="Elipse_1" data-name="Elipse 1" class="cls-2" cx="10.889" cy="14" rx="10.889" ry="14" transform="translate(1405.412 163.352)"/>
+    <g id="Grupo_1" data-name="Grupo 1">
+      <ellipse id="Elipse_2" data-name="Elipse 2" class="cls-3" cx="7" cy="9" rx="7" ry="9" transform="translate(1427.801 139.352)"/>
+      <ellipse id="Elipse_3" data-name="Elipse 3" class="cls-3" cx="7" cy="9" rx="7" ry="9" transform="translate(1390.801 139.352)"/>
+    </g>
+  </g>
+</svg>

@@ -44,7 +44,7 @@ function Feed() {
     return (
         <div>
             <Loader style={{display: !loading ? 'none' : 'flex'}} />
-            <div style={{display: loading ? 'none' : 'flex'}}>
+            <div style={{display: loading ? 'none' : 'inherit'}}>
                 <div id="page-feed" className="container">
                     <header className="page-header">
                         <div className="logo-page-header">
@@ -67,8 +67,14 @@ function Feed() {
                             })}
                         </main>
                     </div>
+
+                    <div style={{textAlign:"center", padding: "2rem"}}>
+                        <Link to="end">Este é o fim</Link>
+                    </div>
                 </div>
+
                 <Menu />
+
             </div>
         </div>
     );

@@ -53,7 +53,7 @@ main .post-container {
     }
 }
 
-@media(min-width: 830px){
+@media (min-width: 830px) {
     .feed-body {
         width: 50%;
     }

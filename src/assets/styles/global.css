@@ -1,7 +1,7 @@
 :root{
     font-size:60%;
 
-    --select-border: #fff;
+    --select-border: rgba(255, 255, 255, 0.562);
     --select-arrow: var(--select-border);
 
     --color-text: #D3D3D3;

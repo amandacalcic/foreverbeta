@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85.82" height="85.83" viewBox="0 0 85.82 85.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #422f0d;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient-3);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" fy="0.20246273279190063" r="0.655" gradientTransform="translate(0)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eab242"/>
+      <stop offset="0.362" stop-color="#e9af41"/>
+      <stop offset="0.562" stop-color="#e8a73e"/>
+      <stop offset="0.723" stop-color="#e69939"/>
+      <stop offset="0.863" stop-color="#e48632"/>
+      <stop offset="0.949" stop-color="#e2762d"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.479" cy="1.283" r="1.425" gradientTransform="matrix(0.012, 1, -0.431, 0.033, 1.026, 0.762)" gradientUnits="objectBoundingBox">
+      <stop offset="0.778" stop-color="#422f0d"/>
+      <stop offset="0.842" stop-color="#2f2109"/>
+      <stop offset="0.913" stop-color="#160f04"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.523" cy="0.313" r="0.69" gradientTransform="translate(-0.214) scale(1.428 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0.665" stop-color="#43bae8"/>
+      <stop offset="0.786" stop-color="#37add7"/>
+      <stop offset="0.949" stop-color="#2497ba"/>
+    </radialGradient>
+  </defs>
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(-1265.276 -120.542)">
+    <path id="Caminho_6" data-name="Caminho 6" class="cls-1" d="M1308.186,120.542a42.915,42.915,0,1,0,42.91,42.92A42.962,42.962,0,0,0,1308.186,120.542Zm-18.5,36.81c-3.87,0-7-4.03-7-9s3.13-9,7-9,7,4.03,7,9S1293.556,157.352,1289.686,157.352Zm37,0c-3.87,0-7-4.03-7-9s3.13-9,7-9,7,4.03,7,9S1330.556,157.352,1326.686,157.352Z"/>
+    <path id="Caminho_7" data-name="Caminho 7" class="cls-2" d="M1333.746,185.952a3.5,3.5,0,0,1-4.72-1.48,23.509,23.509,0,0,0-41.67,0,3.5,3.5,0,0,1-6.21-3.24,30.513,30.513,0,0,1,54.08-.01A3.517,3.517,0,0,1,1333.746,185.952Z"/>
+    <ellipse id="Elipse_4" data-name="Elipse 4" class="cls-3" cx="7" cy="9" rx="7" ry="9" transform="translate(1319.686 139.352)"/>
+    <ellipse id="Elipse_5" data-name="Elipse 5" class="cls-3" cx="7" cy="9" rx="7" ry="9" transform="translate(1282.686 139.352)"/>
+    <path id="Caminho_8" data-name="Caminho 8" class="cls-4" d="M1330.042,166.667l-3.634-6.015a.375.375,0,0,0-.646.009l-3.438,6.051a3.941,3.941,0,0,0-.583,2.063,4.473,4.473,0,0,0,8.945,0,3.793,3.793,0,0,0-.644-2.108Z"/>
+  </g>
+</svg>

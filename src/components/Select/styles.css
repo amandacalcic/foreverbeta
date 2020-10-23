@@ -29,7 +29,6 @@ select::-ms-expand {
     content: "";
     width: 1.7rem;
     height: 0.7em;
-    margin-right: 1.6rem;
     background-color: var(--select-arrow);
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
