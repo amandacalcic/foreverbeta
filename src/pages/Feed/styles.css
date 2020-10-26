@@ -20,6 +20,7 @@
 }
 
 .stories-container {
+    height: 9rem;
     margin: 0.6rem 4rem;
     display: flex;
     flex-direction: row;

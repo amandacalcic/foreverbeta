@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import PrimaryButton from '../../components/PrimaryButton';
 import Header from '../../components/Header';
@@ -6,6 +6,10 @@ import Header from '../../components/Header';
 import './styles.css';
 
 function End() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <div>
             <div id="page-end" className="container">
@@ -28,7 +32,7 @@ function End() {
                         <br/><br/>
                         Esse projeto é o nosso Trabalho de Conclusão de Curso da graduação de Design Digital na Universidade Anhembi Morumbi.
                         <br/><br/>
-                        Se você deseja ler nossa monagrafia e entender o estudo por trás desse projeto acesse o link abaixo:
+                        Se você deseja ler nossa monografia e entender o estudo por trás desse projeto acesse o link abaixo:
                     </p>
                 </article>
 

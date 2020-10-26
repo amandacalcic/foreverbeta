@@ -85,7 +85,8 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
                             </div>
                             <div className="post-evaluation">
                                 <img src={require(`../../assets/images/likes/${post.likeImage}`)} alt="Icones"/>
-                                <span>{post.likes}</span>
+                                {/* <span>{post.likes}</span> */}
+                                <span>{like === "" ? post.likes : (post.likes + 1)}</span>
                             </div>
                         </div>
                     </div>
@@ -93,8 +94,14 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
                 </header>
     
                 <div className="post-description">
-                    { (!expandedInd && <p>{post.description.substring(0,200)+"..."}</p>) 
-                        || (expandedInd && <p>{post.description}</p>) } 
+                    { 
+                        (
+                            !expandedInd && post.description.length > 260 ?
+                            <p>{post.description.substring(0,260)+"..."}</p> : <p>{post.description}</p>
+                        ) ||
+                        (expandedInd && <p>{post.description}</p>) 
+                    }
+                    
                     <div onClick={toggleExpandIndications}>
                         {expandedInd === false ? <img src={ArrowDownIcon} alt="" /> : <img src={ArrowUpIcon} alt="" />}
                     </div>

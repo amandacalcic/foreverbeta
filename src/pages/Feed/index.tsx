@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useCycle } from 'framer';
 
 import Menu from '../../components/Menu';
 import PostItem, { Post } from '../../components/PostItem';
 import StoriesIcon, { Story } from '../../components/StoriesIcon';
 import Loader from '../../components/Loader';
+import StoriesModal from '../../components/StoriesModal';
 
 import LogoImg from '../../assets/images/logo-white.svg';
 
@@ -14,11 +16,30 @@ function Feed() {
     const [loading, setLoading] = useState(true);
     const [feed, setFeed] = useState([]);
     const [stories, setStories] = useState([]);
+    const [isStoriesOpen, toggleStoriesOpen] = useCycle(false, true);
+    const [selectedStories, setselectedStories] = useState(0);
+
+    function openModalStories(id: number){
+        setselectedStories(id - 1)  
+        toggleStoriesOpen()
+
+        const body = document.getElementsByTagName("body")
+        body[0].style.cssText = "overflow : hidden;";
+    }
+
+    function closeModalStories(){
+        const body = document.getElementsByTagName("body")
+        body[0].style.cssText = "overflow : auto;";
+    }
+
+    !isStoriesOpen && closeModalStories();
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         async function loadStories() {
             const response = await fetch(
-                'https://server-foreverbeta.herokuapp.com/stories?_expand=author'
+                `https://server-foreverbeta.herokuapp.com/stories?_expand=author`
             );
 
             const data = await response.json()
@@ -57,7 +78,7 @@ function Feed() {
                     <div className="feed-body">
                         <div className="stories-container">
                             {stories.map((story: Story) => {
-                                return <StoriesIcon key={story.id} story={story} />
+                                return <StoriesIcon key={story.id} story={story} onClick={() => openModalStories(story.id)} />
                             })}
                         </div>
 
@@ -75,6 +96,7 @@ function Feed() {
 
                 <Menu />
 
+                {isStoriesOpen && <StoriesModal toggle={() => toggleStoriesOpen()} stories={stories[selectedStories]} />}
             </div>
         </div>
     );

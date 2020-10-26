@@ -11,7 +11,6 @@
 
 .post-container header > span {
     color: var(--color-text);
-    text-decoration: underline;
     font-weight: 500;
 }
 
@@ -117,6 +116,7 @@
 
 .post-description p {
     margin-top: 1.6rem !important;
+    padding: 0 2rem;
     white-space: pre-line;
     text-align: start;
 }

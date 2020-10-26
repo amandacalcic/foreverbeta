@@ -12,9 +12,9 @@ import './styles.css';
 
 function Home() {
     const pages = [
-        {id: 1, title: "Bem-vinde,", text: "O Forever Beta é uma experiencia digital interativa que imita uma rede social. \n\nO objetivo do Forever é questionar as relações humanas dentro da rede."},
-        {id: 2, title: "Importante", text: "Aqui você não irá encontrar notícias reais! Apenas uma copia do que é discutido nas redes lá fora. \n\nEntre na experiência com a mente aberta. Alguns dos posts podem ser surpreendentes de forma positiva ou negativa. Outros terão aviso de gatilho."},
-        {id: 3, title: "Está preparade?", text: "Você poderá sair a qualquer momento, mas a experiência irá reiniciar toda a vez que fechar a página, ok? \n\nAntes de entrar você irá fazer um cadastro fictício, não se preocupe em responder com infos reais!"},
+        {id: 1, title: "Bem-vinde,", text: "O Forever Beta é uma experiência digital interativa que se assemelha a  uma rede social. \n\nO objetivo do Forever é questionar as relações humanas dentro da redes."},
+        {id: 2, title: "Importante", text: "Os conteúdos presentes durante a imersão são fictícios e não refletem, necessariamente, a nossa opnião. \n\nEntre na experiência de mente aberta e viés critico."},
+        {id: 3, title: "Está preparade?", text: "Você poderá sair a qualquer momento, mas a experiência irá reiniciar toda a vez que fechar a página ok? \n\nAntes de entrar, você irá fazer um cadastro fictício. Não se preocupe em responder com infos reais!"},
     ]
 
     return (
@@ -60,7 +60,7 @@ function Home() {
                                         <div className="indicators">
                                             <ul>
                                                 {pages.map(p => {
-                                                    return (<li className={page.id === p.id ? "active" : ""}></li>)
+                                                    return (<li key={p.id} className={page.id === p.id ? "active" : ""}></li>)
                                                 })}
                                             </ul>
                                         </div>

@@ -40,11 +40,11 @@
 }
 
 html, body, #root {
-    height: 85vh;
+    height: 100%;
 }
 
 body {
-    background: #2C2C2C;
+    background: var(--color-backgroud);
     background-repeat: no-repeat;
     color: var(--color-text);
 }
@@ -59,6 +59,10 @@ textarea {
 
 h1 {
     font-size: 3rem;
+}
+
+p {
+    white-space: pre-line;
 }
 
 ::placeholder {

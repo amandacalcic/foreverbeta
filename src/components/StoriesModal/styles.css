@@ -1,0 +1,118 @@
+.modal-stories-container {
+  width: 100%;
+  height: 100%;
+
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ background-color: #000;
+}
+
+.video-class {
+  display:flex;
+  justify-content: center;
+}
+
+.modal-stories-container .video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.close-stories {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.close-stories::before {
+    content: "x";
+    color: #fff;
+    font-weight: 300;
+    font-size: 10rem;
+    font: normal 3rem Hind Siliguri;
+    z-index: 111;
+}
+
+.close-stories:hover {
+ opacity: 0.7;
+}
+
+
+.modal-stories-container .indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: 0;
+  top: 2rem;
+  left: 0;
+  right: 0;
+}
+
+.modal-stories-container .indicators ul {
+  border-radius: 0px !important;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.modal-stories-container .indicators ul li,
+.modal-stories-container .indicators ul li.active {
+  padding: 0.2rem 1.6rem;
+  background: var(--select-border);
+  margin-right: 1rem;
+  border-radius: 9px;
+}
+
+.modal-stories-container .indicators ul li:last-child {
+  margin-right: 0;
+}
+
+.modal-stories-container .indicators ul li.active {
+  background: #FFFFFF;
+}
+
+.buttons-stories {
+  display: flex;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-stories div {
+  width: 30%;
+  height: 100vh;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.buttons-stories div:first-child {
+  left: 0;
+}
+
+.buttons-stories div:last-child {
+  right: 0;
+}
+
+::-webkit-media-controls {
+  display:none !important;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display:none !important;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none;
+}
