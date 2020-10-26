@@ -30,7 +30,7 @@ function References() {
 
     return (
         <div id="reference-page" className="container">
-            <Header title="Ficou curioso sobre quem somos?" />
+            <Header title="Referências" />
 
             <div className="reference-article">
                 <div>

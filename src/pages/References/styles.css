@@ -1,15 +1,13 @@
 #reference-page {
     width: 100vw;
-    height: 85vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
+.reference-article {
     margin: 0 2rem;
-    text-align: center;
 }
 
 .reference-article .title-reference {
