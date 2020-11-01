@@ -69,7 +69,7 @@ function Feed() {
         <div>
             <Loader style={{display: !loading ? 'none' : 'flex'}} />
             <div style={{display: loading ? 'none' : 'inherit'}}>
-                <div id="page-feed" className="container" style={{display: end ? 'none' : 'inherit'}}>
+                <div id="page-feed" className="container" style={{display: end ? 'none' : ''}}>
                     <header className="page-header">
                         <div className="logo-page-header">
                             <Link to="/">
