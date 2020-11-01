@@ -38,12 +38,22 @@ export const MenuItem: React.FC<MenuItemProps> = ({item}) => {
         whileTap={{ scale: 0.95 }}
         >
         
-            <Link className="menu-item" to={item.link}>
+            {
+              item.link !== "#" ? 
+              <Link className="menu-item" to={item.link}>
                 <div className="icon-placeholder">
                     <img src={require(`../../assets/images/icons/menu/${item.icon}`)} alt="Menu Icon"/>
                 </div>
                 <p className="text-placeholder">{item.description}</p>
-            </Link>
+              </Link>
+              :
+              <div className="menu-item" onClick={() => window.location.reload()}>
+                  <div className="icon-placeholder">
+                      <img src={require(`../../assets/images/icons/menu/${item.icon}`)} alt="Menu Icon"/>
+                  </div>
+                  <p className="text-placeholder">{item.description}</p>
+              </div>
+            }
         </motion.li>
     );
 };

@@ -11,23 +11,70 @@
     width: 85%;
 }
 
-.photo-icon {
+.avatar-icon {
     display: grid;
     grid-template-columns: 90% 10%;
+    cursor: pointer;
 }
 
-.photo-icon input {
+.avatar-icon input {
     width: 95%;
 }
 
-.photo-icon img {
-    margin-left: -25%;
+.avatar-icon img {
+    height: 5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.avatar-image {
+    height: 51.53px;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.avatar-dropdown {
+    position: relative;
+    background-color: var(--color-backgroud);
+    margin-top: -3.5rem;
+    padding: 1rem;
+ 
+    border-radius: 1.6rem;
+    border: 1px solid var(--color-border-input);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.82);
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.82);
+    z-index: 1;
+}
+
+.avatar-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-gap: 5%;
+    padding: 1.6rem;
+}
+
+.avatar-dropdown img {
+    height: 8rem;
+    cursor: pointer;
+    display: block;
+
+    user-select: none;
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+.avatar-dropdown img:active {
+    border: 3px solid #F44EAA;
+    border-radius: 50%;
 }
 
 .term-confirmation {
     display: flex;
     align-items: center;
-    margin-bottom: 1.6rem;
 }
 
 .term-confirmation p {
@@ -38,6 +85,10 @@
 .term-confirmation a {
     color: var(--color-text-link);
     text-decoration: none;
+}
+
+.text-information p {
+    font-size: 1.5rem;
 }
 
 footer {
@@ -52,7 +103,13 @@ footer {
         width: 50%;
     }
 
-    .photo-icon img {
+    .avatar-icon img {
         margin-left: 0;
+    }
+}
+
+@media (min-width:900px) {
+    .avatar-grid {
+        grid-gap: 5% 15%;
     }
 }

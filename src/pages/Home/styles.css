@@ -1,5 +1,5 @@
 .page-home {
-    width: 100vw;
+    width: 100%;
     height: 100%;
 
     scroll-snap-type: y mandatory;
@@ -11,11 +11,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150rem;
-  }
+}
 
 .page-container:nth-child(2) {
-/* background: #dfffd9; */
-background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
+    background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
 }
 
 .overlays-root {
@@ -28,7 +27,6 @@ background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
 
 .model-section {
     height: 100vh;
-    overflow: hidden;
     scroll-snap-align: start;
 }
 
@@ -59,12 +57,21 @@ background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
 }
 
 #page-home-informations .model-section .page-framer {
-    width: 80vw !important;
-    height: 80vh !important;
-    margin-top: -4rem;
+    width: 85% !important;
+    height: 80% !important;
+    /* margin-top: -4rem; */
 
     cursor: ew-resize;
 }
+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (display:flow-root) { 
+        #page-home-informations .model-section .page-framer {
+            margin-top: -4rem;
+        }
+    } 
+}
+
 
 #page-home-informations .model-section .page-framer [data-framer-component-type="Frame"] {
     border-radius: 2.5rem 0 2.5rem 0;
@@ -87,7 +94,7 @@ background: linear-gradient(#FE6E6F, #FF50AA, #7937AD);
 #page-home-informations .model-section .page-framer h1 {
     text-align: left;
     margin-bottom: 1.6rem;
-    padding: 0 1rem;
+    padding: 0 2.6rem;
     font-size: 2.6rem;
     font-weight: 600;
 }

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #page-feed {
     width: 100%;
     background: linear-gradient(141deg, #FF50AA 0%, #7937AD 35%, #240F70 70%, #000000 95%);
@@ -10,7 +14,7 @@
     padding: 1.6rem 0;
 }
 
- .page-header .logo-page-header a {
+.page-header .logo-page-header a {
     height: 4rem;
     transition: opacity 0.2s;
 } 
@@ -40,6 +44,23 @@ main {
 main .post-container {
     width: 80%;
 }
+
+.end-button-section {
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.end-button-section .jump {
+    height: 4rem;
+    transform-origin: 50% 50%;
+    animation: jump .6s linear alternate infinite;
+}
+
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,20%,0) scale3d(1,1,1);}
+    100% {transform: translate3d(0,50%,0) scale3d(1,1,1);}
+  }
 
 @media (min-width: 700px) {
     #page-feed {

@@ -1,5 +1,5 @@
 #page-end {
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -14,4 +14,10 @@
 
 .decoration-text {
     color: var(--color-text-link);
+}
+
+.article-end-body p {
+    margin: 0 5rem 3rem 5rem;
+    white-space: pre-line;
+    text-align: justify;
 }

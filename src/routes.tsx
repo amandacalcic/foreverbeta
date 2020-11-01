@@ -6,7 +6,6 @@ import Feed from './pages/Feed';
 import Register from './pages/Register';
 import PrivacyTerm from './pages/PrivacyTerm';
 import References from './pages/References';
-import End from './pages/End';
 
 function Routes(){
     return (
@@ -16,7 +15,6 @@ function Routes(){
             <Route path="/register" component={Register} />
             <Route path="/term" component={PrivacyTerm} />
             <Route path="/references" component={References} />
-            <Route path="/end" component={End} />
         </BrowserRouter>
     );
 }

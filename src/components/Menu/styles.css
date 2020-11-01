@@ -65,6 +65,7 @@ nav {
 .menu-item {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
   
 .icon-placeholder {
