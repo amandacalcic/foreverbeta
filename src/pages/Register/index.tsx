@@ -58,7 +58,7 @@ function Register() {
                 <form>
                     <Input 
                         name="nickname"
-                        className={user !== "" ? "input-block-valid" : "input-block-invalid"}
+                        className={user !== "" ? "input-block-valid" : ""}
                         placeholder="Digite nickname soberbo ou deprimido"
                         onChange={e => setUser(e.target.value)}
                         autoComplete="off" 
@@ -66,7 +66,7 @@ function Register() {
 
                     <Select
                         name="personalidade"
-                        status={personality !== "0" ? "valid" : "invalid"}
+                        status={personality !== "0" ? "valid" : ""}
                         placeholder="Escolha uma personalidade fake para você"
                         onChange={e => setPersonality(e.target.value)}
                         options={[
@@ -83,7 +83,7 @@ function Register() {
                         <div className="avatar-icon">
                             <Input 
                                 name="foto-perfil"
-                                className={avatar !== "" ? "input-block-valid" : "input-block-invalid"}
+                                className={avatar !== "" ? "input-block-valid" : ""}
                                 value={avatar === "" ? "Selecione sua foto de perfil biscoiteira" : "Foto selecionada :)"} 
                                 onClick={() => setShowAvatar(!showAvatar)}
                                 autoComplete="off" 
