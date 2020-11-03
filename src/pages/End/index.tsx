@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 
 import PrimaryButton from '../../components/PrimaryButton';
 import Header from '../../components/Header';
+import Menu from '../../components/Menu';
 
 import './styles.css';
 
-const End = () => {
+function End() {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -40,6 +41,8 @@ const End = () => {
                     <PrimaryButton title="Acesse o projeto" />
                 </a>
             </footer>
+
+            <Menu />
         </div>
     );
 };

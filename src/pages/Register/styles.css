@@ -1,9 +1,10 @@
 #register-page {
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: unset;
 }
 
 .form-page {
@@ -79,7 +80,7 @@
 
 .term-confirmation p {
     margin-top: 1.6rem;
-    margin-left: 1.6rem;
+    margin-left: 1rem;
 }
 
 .term-confirmation a {
@@ -112,4 +113,12 @@ footer {
     .avatar-grid {
         grid-gap: 5% 15%;
     }
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (display:flow-root) { 
+        .term-confirmation {
+            margin-bottom: 1rem;
+        }
+    } 
 }

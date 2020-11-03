@@ -7,7 +7,6 @@ import PostItem, { Post } from '../../components/PostItem';
 import StoriesIcon, { Story } from '../../components/StoriesIcon';
 import Loader from '../../components/Loader';
 import StoriesModal from '../../components/StoriesModal';
-import End from '../End';
 
 import LogoImg from '../../assets/images/logo-white.svg';
 import DownIcon from '../../assets/images/icons/down.svg';
@@ -16,7 +15,6 @@ import './styles.css';
 
 function Feed() {
     const [loading, setLoading] = useState(true);
-    const [end, setEnd] = useState(false);
     const [feed, setFeed] = useState([]);
     const [stories, setStories] = useState([]);
     const [isStoriesOpen, toggleStoriesOpen] = useCycle(false, true);
@@ -69,7 +67,7 @@ function Feed() {
         <div>
             <Loader style={{display: !loading ? 'none' : 'flex'}} />
             <div style={{display: loading ? 'none' : 'inherit'}}>
-                <div id="page-feed" className="container" style={{display: end ? 'none' : ''}}>
+                <div id="page-feed" className="container">
                     <header className="page-header">
                         <div className="logo-page-header">
                             <Link to="/">
@@ -92,15 +90,11 @@ function Feed() {
                         </main>
                     </div>
 
-                    <div className="end-button-section" onClick={() => setEnd(true)} >
-                        <a href="#end-section" onClick={() => setEnd(true)}>
+                    <div className="end-button-section" >
+                        <a href="/end" >
                             <img src={DownIcon} className="jump" alt=""/>
                         </a>
                     </div>
-                </div>
-
-                <div id="end-section" style={{display: !end ? 'none' : 'flex'}} >
-                    <End /> 
                 </div>
 
                 <Menu />

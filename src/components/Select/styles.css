@@ -28,9 +28,9 @@ select::-ms-expand {
 .select-block::after {
     content: "";
     width: 1.7rem;
-    height: 0.7em;
-    background-color: var(--select-arrow);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    height: 1.7rem;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
 }
 
 select, .select-block:after {
@@ -45,19 +45,41 @@ select, .select-block:after {
 }
 
 .select-block-invalid select {
-    border-bottom: 1px solid var(--color-border-input-invalid);
-    color: var(--color-text-input-invalid);
+    border-bottom: 1px solid var(--color-border-input-invalid) !important;
+    color: var(--color-text-input-invalid) !important;
 }
 
 .select-block-valid select {
-    border-bottom: 1px solid var(--color-border-input-valid);
-    color: var(--color-text-input-valid);
+    border-bottom: 1px solid var(--color-border-input-valid) !important;
+    color: var(--color-text-input-valid) !important;
 }
 
 .select-block-invalid::after {
-    background-color: var(--color-border-input-invalid);
+    background-clip: content-box;
+    background-color: var(--color-border-input-invalid) !important;
+    border-color: var(--color-text-input-invalid) !important;
+    padding: 0.2rem;
 }
 
 .select-block-valid::after {
-    background-color: var(--color-border-input-valid);
+    background-clip: content-box;
+    background-color: var(--color-border-input-valid) !important;
+    border-color: var(--color-text-input-valid) !important;
+    padding: 0.2rem;
+}
+
+.select-block-valid::-moz-placeholder {
+    color: var(--color-text-input-valid) !important;
+}
+
+.select-block-invalid::-moz-placeholder {
+    color: var(--color-text-input-invalid) !important;
+}
+
+.select-block-valid::placeholder {
+    color: var(--color-text-input-valid) !important;
+}
+
+.select-block-invalid::placeholder {
+    color: var(--color-text-input-invalid) !important;
 }

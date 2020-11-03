@@ -24,17 +24,34 @@ input[type='radio'] {
     width: auto;
     margin-top: 2rem;
     margin-bottom: 0;
-    background-color: var(--color-backgroud);
-    border-color: var(--color-border-input);
-    border-radius: 50%;
 }
 
-.input-block-invalid input {
-    border-bottom: 1px solid var(--color-border-input-invalid);
-    color: var(--color-text-input-invalid);
+.input-block-invalid {
+    border-bottom: 1px solid var(--color-border-input-invalid) !important;
+    color: var(--color-text-input-invalid) !important;
 }
 
-.input-block-valid input {
-    border-bottom: 1px solid var(--color-border-input-valid);
-    color: var(--color-text-input-valid);
+.input-block-valid {
+    border-bottom: 1px solid var(--color-border-input-valid) !important;
+    color: var(--color-text-input-valid) !important;
+}
+
+.input-block input:disabled {
+    opacity: 1;
+}
+
+.input-block-valid::-moz-placeholder {
+    color: var(--color-text-input-valid) !important;
+}
+
+.input-block-invalid::-moz-placeholder {
+    color: var(--color-text-input-invalid) !important;
+}
+
+.input-block-valid::placeholder {
+    color: var(--color-text-input-valid) !important;
+}
+
+.input-block-invalid::placeholder {
+    color: var(--color-text-input-invalid) !important;
 }

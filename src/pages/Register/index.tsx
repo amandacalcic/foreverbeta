@@ -12,9 +12,21 @@ import LessIcon from '../../assets/images/icons/less.svg';
 import './styles.css';
 
 function Register() {
-    var coisa = useRef(null);
+    // const [validRegister, setValidRegister] = useState(false);
+    const [user, setUser] = useState("");
+    const [personality, setPersonality] = useState("0");
+    const [term, setTerm] = useState("");
+    
+    var avatarRef = useRef(null);
     const [avatar, setAvatar] = useState("");
-    const [showAvatar, setShowAvatar] = useState(false);
+    const [showAvatar, setShowAvatar] = useState(false);    
+
+    function ValidRegister() {
+        if(user !== "" && personality !== "0" && avatar !== "" && term !== "")
+            return true;
+        else
+            return false;
+    }
 
     function SelectAcatar(selectedAvatar : string){
         avatar === "" || avatar !== selectedAvatar ? setAvatar(selectedAvatar) : setAvatar("")
@@ -36,7 +48,7 @@ function Register() {
         }, [ref])
     }
 
-    useOutsideAlerter(coisa)
+    useOutsideAlerter(avatarRef)
 
     return (
         <div id="register-page" className="container">
@@ -44,11 +56,19 @@ function Register() {
 
             <div className="form-page">
                 <form>
-                    <Input name="nickname" placeholder="Digite nickname soberbo ou deprimido" autoComplete="off" />
+                    <Input 
+                        name="nickname"
+                        className={user !== "" ? "input-block-valid" : "input-block-invalid"}
+                        placeholder="Digite nickname soberbo ou deprimido"
+                        onChange={e => setUser(e.target.value)}
+                        autoComplete="off" 
+                    />
 
                     <Select
                         name="personalidade"
+                        status={personality !== "0" ? "valid" : "invalid"}
                         placeholder="Escolha uma personalidade fake para você"
+                        onChange={e => setPersonality(e.target.value)}
                         options={[
                             {value: '1', label: 'Ativista de storie' },
                             {value: '2', label: 'Biscoiter@ sexual' },
@@ -61,34 +81,40 @@ function Register() {
 
                     <div className="avatar-button">
                         <div className="avatar-icon">
-                            <Input name="foto-perfil" id="avatar" value={avatar === "" ? "Selecione sua foto de perfil biscoiteira" : "Foto selecionada :)"} autoComplete="off" disabled />
+                            <Input 
+                                name="foto-perfil"
+                                className={avatar !== "" ? "input-block-valid" : "input-block-invalid"}
+                                value={avatar === "" ? "Selecione sua foto de perfil biscoiteira" : "Foto selecionada :)"} 
+                                onClick={() => setShowAvatar(!showAvatar)}
+                                autoComplete="off" 
+                                disabled
+                            />
 
                             <div onClick={() => setShowAvatar(!showAvatar)}>
                                 {
                                     avatar === "" && !showAvatar ? <img id="avatar" src={PlusIcon} alt="Adicionar"/> :
                                     avatar === "" && showAvatar ? <img id="avatar" src={LessIcon} alt="Adicionar"/>
-                                    : <img id="avatar" className="avatar-image" src={require(`../../assets/images/avatars/${avatar}.svg`)} alt="" />
+                                    : <img id="avatar" className="avatar-image" src={require(`../../assets/images/avatars/${avatar}.png`)} alt="" />
                                 }
                             </div>
                                 
                         </div>
 
-                        <div id="avatar" className="avatar-dropdown" style={{display: showAvatar ? "block" : "none"}} ref={coisa}>
+                        <div id="avatar" className="avatar-dropdown" style={{display: showAvatar ? "block" : "none"}} ref={avatarRef}>
                             <div id="avatar" className="avatar-grid">
-                                <img src={require(`../../assets/images/avatars/avatar1.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar1")} id="avatar" alt=""/>
-                                <img src={require(`../../assets/images/avatars/avatar2.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar2")} id="avatar" alt=""/>
-                                <img src={require(`../../assets/images/avatars/avatar3.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar3")} id="avatar" alt=""/>
-                                <img src={require(`../../assets/images/avatars/avatar4.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar4")} id="avatar" alt=""/>
-                                <img src={require(`../../assets/images/avatars/avatar5.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar5")} id="avatar" alt=""/>
-                                <img src={require(`../../assets/images/avatars/avatar6.svg`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar6")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar1.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar1")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar2.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar2")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar3.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar3")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar4.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar4")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar5.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar5")} id="avatar" alt=""/>
+                                <img src={require(`../../assets/images/avatars/avatar6.png`)} onContextMenu={(e) => e.preventDefault()} onClick={() => SelectAcatar("avatar6")} id="avatar" alt=""/>
                             </div>
                         </div>
                     </div>
 
                     <div className="term-confirmation" >
-                        <Input name="termo" type="radio" required />
-                        <p>Você aceita nossos <Link to="/term" >termos e condições</Link>?
-                        </p>
+                        <Input name="termo" type="radio" required onChange={e => setTerm(e.target.value)} />
+                        <p>Você aceita nossos <Link to="/term" >termos e condições</Link>?</p>
                     </div>
 
                     <div className="text-information">
@@ -100,7 +126,7 @@ function Register() {
 
                 <footer>
                     <Link to="/feed" >
-                        <PrimaryButton title="Cadastrar" />
+                        <PrimaryButton className={!ValidRegister() ? "button-disabled" : ""} title="Cadastrar" />
                     </Link>
                 </footer>
             </div>
