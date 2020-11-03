@@ -13,7 +13,7 @@ const variants = {
 };
 
 const itensMenu = [
-  { id: 0, description:"Reiniciar", link:"#", icon: "arrow.svg"},
+  { id: 0, description:"Reiniciar", link:"/feed", icon: "arrow.svg"},
   { id: 1, description:"Sair", link:"/", icon: "exit.svg"},
   { id: 2, description:"Termo", link:"/term", icon: "term.svg"},
   { id: 3, description:"Referências", link:"/references", icon: "references.svg"}

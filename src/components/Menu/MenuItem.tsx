@@ -39,7 +39,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({item}) => {
         >
         
             {
-              item.link !== "#" ? 
+              item.link !== "/feed" || (item.link === "/feed" && window.location.pathname !== "/feed") ? 
               <Link className="menu-item" to={item.link}>
                 <div className="icon-placeholder">
                     <img src={require(`../../assets/images/icons/menu/${item.icon}`)} alt="Menu Icon"/>

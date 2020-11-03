@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
 import Header from '../../components/Header';
@@ -8,6 +8,10 @@ import './styles.css';
 
 function PrivacyTerm(){
     let history = useHistory();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return(
         <div id="privacy-term-page" className="container">

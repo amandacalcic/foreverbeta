@@ -19,7 +19,11 @@ function Register() {
     
     var avatarRef = useRef(null);
     const [avatar, setAvatar] = useState("");
-    const [showAvatar, setShowAvatar] = useState(false);    
+    const [showAvatar, setShowAvatar] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     function ValidRegister() {
         if(user !== "" && personality !== "0" && avatar !== "" && term !== "")
