@@ -37,7 +37,7 @@ function End() {
             </article>
 
             <footer>
-                <a href="https://www.google.com.br" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.instagram.com/_foreverbeta/" rel="noopener noreferrer" target="_blank">
                     <PrimaryButton title="Acesse o projeto" />
                 </a>
             </footer>
