@@ -37,7 +37,7 @@ function End() {
             </article>
 
             <footer>
-                <a href="https://www.instagram.com/_foreverbeta/" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.behance.net/gallery/108506429/Forever-Beta" rel="noopener noreferrer" target="_blank">
                     <PrimaryButton title="Acesse o projeto" />
                 </a>
             </footer>

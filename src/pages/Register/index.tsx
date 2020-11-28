@@ -129,7 +129,7 @@ function Register() {
                 </form>
 
                 <footer>
-                    <Link to="/feed" >
+                    <Link to="/feed" style={{pointerEvents: !ValidRegister() ? "none" : "inherit"}} >
                         <PrimaryButton className={!ValidRegister() ? "button-disabled" : ""} title="Cadastrar" />
                     </Link>
                 </footer>

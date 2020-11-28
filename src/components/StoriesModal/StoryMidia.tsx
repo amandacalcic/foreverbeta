@@ -30,7 +30,7 @@ export const StoryMidia: React.FC<StoryProps> = ({ story, nextVideo }) => {
                         id="video-stories"
                         className="video"
                         autoPlay 
-                        preload="auto"
+                        preload="none"
                         playsInline
                         onEnded={nextVideo}
                         src={require(`../../assets/videos/${story.src}`)}
